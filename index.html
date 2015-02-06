@@ -1,0 +1,331 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Apache NiFi</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="images/nifi16.ico"/>
+        <link rel="stylesheet" href="stylesheets/app.css" />
+        <link rel="stylesheet" href="assets/stylesheets/font-awesome.min.css">
+        <script src="assets/js/modernizr.js"></script>
+        <script src="assets/js/webfontloader.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-57264262-1', 'auto');
+            ga('send', 'pageview');
+      </script>
+    </head>
+    <body>
+        <div class="sticky contain-to-grid">
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1>
+                    <a href="index.html">
+                        <img id="logo-top-bar" src="images/nifiDrop.svg" alt="Apache NiFi"/>
+                    </a>
+                </h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li class="has-dropdown">
+                    <a href="#">Project</a>
+                    <ul class="dropdown">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="https://blogs.apache.org/nifi/"><i class="fa fa-external-link external-link"></i>Apache NiFi Blog</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="http://www.apache.org/licenses/LICENSE-2.0"><i class="fa fa-external-link external-link"></i>License</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">Documentation</a>
+                    <ul class="dropdown">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="overview.html">NiFi Overview</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="developer-guide.html">Developer Guide</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">Download</a>
+                    <ul class="dropdown">
+                        <li><a href="download.html">Download NiFi</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">Community</a>
+                    <ul class="dropdown">
+                        <li><a href="mailing_lists.html">Mailing Lists</a></li>
+                        <li><a href="people.html">People</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">Development</a>
+                    <ul class="dropdown">
+                        <li><a href="quickstart.html">Quickstart</a></li>
+                        <li><a href="release-guide.html">Release Guide</a></li>
+                        <li><a href="https://git-wip-us.apache.org/repos/asf/incubator-nifi.git"><i class="fa fa-external-link external-link"></i>Source</a></li>
+                        <li><a href="https://issues.apache.org/jira/browse/NIFI"><i class="fa fa-external-link external-link"></i>Issues</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">ASF Links</a>
+                    <ul class="dropdown">
+                        <li><a href="http://www.apache.org"><i class="fa fa-external-link external-link"></i>Apache Software Foundation</a></li>
+                        <li><a href="http://www.apache.org/foundation/sponsorship.html"><i class="fa fa-external-link external-link"></i>Sponsorship</a></li>
+                        <li><a href="http://www.apache.org/security/"><i class="fa fa-external-link external-link"></i>Security</a></li>
+                        <li><a href="http://www.apache.org/foundation/thanks.html"><i class="fa fa-external-link external-link"></i>Thanks</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</div>
+
+
+<div class="large-space"></div>
+<div class="row">
+    <div class="medium-6 large-5 columns">
+        <div class="row">
+            <div class="large-12 columns">
+                <h1 id="nifi-landing" class="right-text nifi-txt">
+                    <span>
+                        Apache <span class="ni">ni</span><span class="fi">fi</span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <p class="right-text description">
+                    is an easy to use, powerful, and reliable system to process and distribute data.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="medium-6 large-7 columns">
+        <img id="flow" src="images/flow.png" alt="NiFi flow"/>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="large-space"></div>
+<div class="row">
+    <div class="large-12 columns features">
+        <h2>Features</h2>
+    </div>
+</div>
+<div class="medium-space"></div>
+<div class="row">
+    <div class="large-12 columns">
+        <p class="description">
+            <span class="nifi-txt">Apache <span class="ni">ni</span><span class="fi">fi</span></span> supports
+            powerful and scalable directed graphs of data routing, transformation, and system mediation logic. Some
+            of the high-level capabilities and objectives of Apache NiFi include:
+        </p>
+        <ul>
+            <li>Web-based user interface for seamless experience between design, control, feedback, and monitoring
+                of data flows
+            </li>
+            <li>Highly configurable along several dimensions of quality of service such as loss tolerant versus
+                guaranteed delivery, low latency versus high throughput, and priority based queuing
+            </li>
+            <li>Fine-grained data provenance for all data received, forked, joined, cloned, modified, sent, and
+                ultimately dropped as data reaches its configured end-state
+            </li>
+            <li>Component-based extension model along well defined interfaces enabling rapid development and
+                effective testing
+            </li>
+            <li>Security: Supports various forms of SSL, SSH, HTTPS for system to system flows and content
+                encryption/decryption. And SSL, PKI, pluggable authorization for users.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--<div class="row">
+    <div class="large-12 columns">
+        <h1>Welcome to Foundation</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel">
+            <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+            <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+            <p>Once you've exhausted the fun in this document, you should check out:</p>
+            <div class="row">
+                <div class="large-4 medium-4 columns">
+                    <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+                </div>
+                <div class="large-4 medium-4 columns">
+                    <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+                </div>
+                <div class="large-4 medium-4 columns">
+                    <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
+                </div>        
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-8 medium-8 columns">
+        <h5>Here&rsquo;s your basic grid:</h5>
+        Grid Example 
+
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="callout panel">
+                    <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 medium-6 columns">
+                <div class="callout panel">
+                    <p>Six columns</p>
+                </div>
+            </div>
+            <div class="large-6 medium-6 columns">
+                <div class="callout panel">
+                    <p>Six columns</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-4 medium-4 small-4 columns">
+                <div class="callout panel">
+                    <p>Four columns</p>
+                </div>
+            </div>
+            <div class="large-4 medium-4 small-4 columns">
+                <div class="callout panel">
+                    <p>Four columns</p>
+                </div>
+            </div>
+            <div class="large-4 medium-4 small-4 columns">
+                <div class="callout panel">
+                    <p>Four columns</p>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+        <form>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Input Label</label>
+                    <input type="text" placeholder="large-12.columns" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-4 medium-4 columns">
+                    <label>Input Label</label>
+                    <input type="text" placeholder="large-4.columns" />
+                </div>
+                <div class="large-4 medium-4 columns">
+                    <label>Input Label</label>
+                    <input type="text" placeholder="large-4.columns" />
+                </div>
+                <div class="large-4 medium-4 columns">
+                    <div class="row collapse">
+                        <label>Input Label</label>
+                        <div class="small-9 columns">
+                            <input type="text" placeholder="small-9.columns" />
+                        </div>
+                        <div class="small-3 columns">
+                            <span class="postfix">.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Select Box</label>
+                    <select>
+                        <option value="husker">Husker</option>
+                        <option value="starbuck">Starbuck</option>
+                        <option value="hotdog">Hot Dog</option>
+                        <option value="apollo">Apollo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-6 medium-6 columns">
+                    <label>Choose Your Favorite</label>
+                    <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+                    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+                </div>
+                <div class="large-6 medium-6 columns">
+                    <label>Check these out</label>
+                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                    <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Textarea Label</label>
+                    <textarea placeholder="small-12.columns"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>     
+
+    <div class="large-4 medium-4 columns">
+        <h5>Try one of these buttons:</h5>
+        <p><a href="#" class="small button">Simple Button</a><br/>
+            <a href="#" class="small radius button">Radius Button</a><br/>
+            <a href="#" class="small round button">Round Button</a><br/>            
+            <a href="#" class="medium success button">Success Btn</a><br/>
+            <a href="#" class="medium alert button">Alert Btn</a><br/>
+            <a href="#" class="medium secondary button">Secondary Btn</a></p>           
+        <div class="panel">
+            <h5>So many components, girl!</h5>
+            <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
+            <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+        </div>
+    </div>
+</div>-->
+        <div class="row">
+    <div class="large-12 columns footer">
+        <div class="disclaimer">
+            <p>
+                Disclaimer: Apache NiFi is an effort undergoing incubation at the Apache Software Foundation (ASF),
+                sponsored by the Apache Incubator PMC. Incubation is required of all newly accepted projects until 
+                a further review indicates that the infrastructure, communications, and decision making process 
+                have stabilized in a manner consistent with other successful ASF projects. While incubation status 
+                is not necessarily a reflection of the completeness or stability of the code, it does indicate that 
+                the project has yet to be fully endorsed by the ASF.
+            </p>
+        </div>
+        <a href="http://www.apache.org">
+            <img id="asf-logo" alt="Apache Software Foundation" src="images/feather-small.gif">
+        </a>
+        <a href="http://incubator.apache.org/">
+            <img id="incubator-logo" alt="Apache Incubator" src="images/egg-logo.png">
+        </a>
+
+        <div id="copyright">
+            <p>Copyright &#169; 2014 The Apache Software Foundation, Licensed under the <a
+                    href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>Apache, the
+                Apache feather logo, and the Apache Incubator project logo are trademarks of The Apache Software
+                Foundation.</p>
+        </div>
+    </div>
+</div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/foundation.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
