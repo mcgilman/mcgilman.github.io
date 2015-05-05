@@ -16,7 +16,7 @@
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-57264262-1', 'auto');
             ga('send', 'pageview');
-      </script>
+        </script>
     </head>
     <body>
         <div class="sticky contain-to-grid">
@@ -41,7 +41,6 @@
                     <ul class="dropdown">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="https://blogs.apache.org/nifi/"><i class="fa fa-external-link external-link"></i>Apache NiFi Blog</a></li>
-                        <li><a href="roadmap.html">Roadmap</a></li>
                         <li><a href="http://www.apache.org/licenses/LICENSE-2.0"><i class="fa fa-external-link external-link"></i>License</a></li>
                     </ul>
                 </li>
@@ -49,6 +48,7 @@
                     <a href="#">Documentation</a>
                     <ul class="dropdown">
                         <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="screencasts.html">Screencasts</a></li>
                         <li><a href="overview.html">NiFi Overview</a></li>
                         <li><a href="user-guide.html">User Guide</a></li>
                         <li><a href="developer-guide.html">Developer Guide</a></li>
@@ -72,6 +72,8 @@
                     <ul class="dropdown">
                         <li><a href="quickstart.html">Quickstart</a></li>
                         <li><a href="release-guide.html">Release Guide</a></li>
+                        <li><a href="licensing-guide.html">Licensing Guide</a></li>
+                        <li><a href="developer-guide.html">Developer Guide</a></li>
                         <li><a href="https://git-wip-us.apache.org/repos/asf/incubator-nifi.git"><i class="fa fa-external-link external-link"></i>Source</a></li>
                         <li><a href="https://issues.apache.org/jira/browse/NIFI"><i class="fa fa-external-link external-link"></i>Issues</a></li>
                     </ul>
@@ -94,13 +96,8 @@
     <div class="large-12 columns">
         <div class="large-space"></div>
         <h1 id="apache-nifi-development-quickstart">Apache NiFi Development Quickstart</h1>
-<p>This documentation is in progress, but should get many started at building Apache NiFi.</p>
 <h2 id="source-code">Source Code</h2>
-<p>Apache NiFi source code is version controlled using <a href="http://git-scm.com/">Git</a> version control (<a href="https://git-wip-us.apache.org/repos/asf?p=incubator-nifi.git;a=summary">browse</a>|<a href="http://git-wip-us.apache.org/repos/asf/incubator-nifi.git">checkout</a>).  </p>
-<p>The code is also mirrored to <a href="https://github.com/apache/incubator-nifi">Github</a></p>
-<p>The code as it was initially contributed and entered the incubator is on the &#39;master&#39; branch.</p>
-<p>To view the lastest codebase as we work toward an initial release checkout the &#39;develop&#39; branch.</p>
-<p>All guidance that follows assumes you are working on the &#39;develop&#39; branch.</p>
+<p>Apache NiFi source code is version controlled using <a href="http://git-scm.com/">Git</a> version control (<a href="https://git-wip-us.apache.org/repos/asf?p=incubator-nifi.git;a=summary">browse</a>|<a href="http://git-wip-us.apache.org/repos/asf/incubator-nifi.git">checkout</a>).<br>The code is also mirrored to <a href="https://github.com/apache/incubator-nifi">Github</a></p>
 <h2 id="issue-tracking">Issue Tracking</h2>
 <p>Track issues on the &quot;NIFI&quot; Project on the Apache Jira (<a href="https://issues.apache.org/jira/browse/NIFI">browse</a>).</p>
 <h2 id="building">Building</h2>
@@ -115,7 +112,13 @@ Then checkout the &#39;develop&#39; branch</p>
 <ol>
 <li>You need a recent Java 7 (or newer) JDK.</li>
 <li>You need Apache <a href="http://maven.apache.org/">Maven 3.X</a>. We&#39;ve successfully used 3.2.3 and as far back as 3.0.5</li>
-<li>Build the maven plugins.  In the root dir of the source tree cd to <code>nifi-nar-maven-plugin</code>.
+<li>Ensure your MAVEN_OPTS provides sufficient memory.  Some build steps are fairly memory intensive<ul>
+<li>These settings have worked well <code>MAVEN_OPTS=&quot;-Xms1024m -Xmx3076m -XX:MaxPermSize=256m&quot;</code></li>
+</ul>
+</li>
+<li>Build the nifi parent. In the root dir of the source tree cd to <code>nifi-parent</code>.
+Run <code>mvn clean install</code></li>
+<li>Build the nifi nar maven plugin.  In the root dir of the source tree cd to <code>nifi-nar-maven-plugin</code>.
 Run <code>mvn clean install</code></li>
 <li>Build the entire code base.  In the root dir of the source tree cd to <code>nifi</code> and run <code>mvn -T C2.0 clean install</code>
 You can tweak the maven build settings as you like but the previous command will execute with 2 threads per core.</li>
