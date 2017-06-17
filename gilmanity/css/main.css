@@ -1,0 +1,7 @@
+body {
+    background: url(../imgs/rays.svg) no-repeat center center, radial-gradient(ellipse at center, rgba(0,0,0,0) 30%, rgba(0,0,0,0.3) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #277455;
+    height: 100%;
+}
