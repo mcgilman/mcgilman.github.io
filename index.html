@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 var IMG_HEIGHT = 3264;
@@ -34,22 +34,18 @@
 
                 svg.append('defs')
                     .append('path')
-                    .attr({
-                        d: getTextPathData,
-                        id: 'curvedTextPath'
-                    });
+                    .attr('d', getTextPathData)
+                    .attr('id', 'curvedTextPath');
 
                 var group = svg.append('g');
 
                 // background image
                 group.append('image')
-                    .attr({
-                        'xlink:href': 'imgs/matt-beer-min.jpg',
-                        'x': 0,
-                        'y': 0,
-                        'width': IMG_WIDTH,
-                        'height': IMG_HEIGHT
-                    });
+                    .attr('xlink:href', 'imgs/matt-beer-min.jpg')
+                    .attr('x', 0)
+                    .attr('y', 0)
+                    .attr('width', IMG_WIDTH)
+                    .attr('height', IMG_HEIGHT);
 
                 // coaster group
                 var coasterGroup = group.append('g')
@@ -60,30 +56,24 @@
 
                 // coaster
                 coasterGroup.append('circle')
-                    .attr({
-                        'cx': COASTER_CX,
-                        'cy': COASTER_CY,
-                        'r': COASTER_RADIUS
-                    });
+                    .attr('cx', COASTER_CX)
+                    .attr('cy', COASTER_CY)
+                    .attr('r', COASTER_RADIUS);
 
                 // name
                 coasterGroup.append('text')
                     .attr('class', 'name')
                     .append('textPath')
-                    .attr({
-                        startOffset: '0%',
-                        'xlink:href': '#curvedTextPath'
-                    })
+                    .attr('startOffset', '0%')
+                    .attr('xlink:href', '#curvedTextPath')
                     .text('Matt Gilman');
 
                 // github
                 coasterGroup.append('text')
                     .attr('class', 'link')
                     .append('textPath')
-                    .attr({
-                        startOffset: '70%',
-                        'xlink:href': '#curvedTextPath'
-                    })
+                    .attr('startOffset', '70%')
+                    .attr('xlink:href', '#curvedTextPath')
                     .text('\uf09b')
                     .on('click', function () {
                         window.location = 'https://github.com/mcgilman';
@@ -93,10 +83,8 @@
                 coasterGroup.append('text')
                     .attr('class', 'link')
                     .append('textPath')
-                    .attr({
-                        startOffset: '90%',
-                        'xlink:href': '#curvedTextPath'
-                    })
+                    .attr('startOffset', '90%')
+                    .attr('xlink:href', '#curvedTextPath')
                     .text('\uf081')
                     .on('click', function () {
                         window.location = 'https://twitter.com/mattgilman';
@@ -105,10 +93,9 @@
                 var resizeSvg = function () {
                     var height = getHeight();
 
-                    svg.attr({
-                        'width': height * 0.75,
-                        'height': height
-                    });
+                    svg
+                        .attr('width', height * 0.75)
+                        .attr('height', height);
 
                     group.attr('transform', function () {
                         var scale = height / IMG_HEIGHT;
